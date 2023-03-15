@@ -1,0 +1,13 @@
+<h1 class="mb-3">Liste des véhicules disponible</h1>
+<hr>
+<div *ngIf="vehiculeList" class="row">
+    <div *ngFor="let vehicule of vehiculeList" class="card" style="width: 18rem;">
+        <img [src]="vehicule.imageUrl"
+         class="card-img-top" alt="Belle voiture">
+        <div class="card-body">
+          <h5 class="card-title">{{vehicule.name}}</h5>
+          <p class="card-text">{{vehicule.marque}}</p>
+          <a routerLink="vehicule/{{vehicule.id}}" href="#" class="btn btn-primary">Consulter</a>
+        </div>
+    </div>
+</div>
