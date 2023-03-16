@@ -1,7 +1,7 @@
 <h1 class="mb-3">Liste des véhicules disponible</h1>
 <hr>
 <div *ngIf="vehiculeList" class="row">
-    <div *ngFor="let vehicule of vehiculeList" class="card" style="width: 18rem;">
+    <div *ngFor="let vehicule of vehiculeList" class="card p-0" style="width: 18rem;">
         <img [src]="vehicule.imageUrl"
          class="card-img-top" alt="Belle voiture">
         <div class="card-body">
@@ -11,3 +11,4 @@
         </div>
     </div>
 </div>
+<app-add-vehicule></app-add-vehicule>

@@ -3,16 +3,16 @@ export class Vehicule {
     id!:number;
     name:string;
     marque:string;
-    kilometrage:string;
+    kilometrage:number;
     prix:number;
     imageUrl:string;
 
     constructor(
-        name:string,
-        marque:string,
-        kilometrage:string,
-        prix:number,
-        imageUrl:string
+        name:string="",
+        marque:string="",
+        kilometrage:number=0,
+        prix:number=0,
+        imageUrl:string=""
         ){
         this.name = name;
         this.marque = marque;

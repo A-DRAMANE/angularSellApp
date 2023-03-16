@@ -1,0 +1,53 @@
+<form (ngSubmit)="onSubmit()" #vehiculeForm="ngForm">
+  <div class="modal-body">
+    <div class="">
+      <label for="name" class="form-label">Nom du véhicule</label>
+      <input [(ngModel)]="vehicule.name" #name="ngModel" type="text" id="name" class="form-control" name="name" >
+      <div [hidden]="name.valid || name.pristine" id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+        characters, or emoji.
+      </div>
+    </div>
+    
+    <div class="">
+      <label for="marque" class="form-label">La marque</label>
+      <input [(ngModel)]="vehicule.marque" #marque="ngModel" type="text" id="marque" class="form-control" name="marque" >
+      <div [hidden]="marque.valid || marque.pristine" id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+        characters, or emoji.
+      </div>
+    </div>
+    
+    <div class="">
+      <label for="kilometrage" class="form-label">Son kilometrage</label>
+      <input [(ngModel)]="vehicule.kilometrage" #kilometrage="ngModel" type="number" id="kilometrage" class="form-control" name="kilometrage" >
+      <div [hidden]="kilometrage.valid || kilometrage.pristine" id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+        characters, or emoji.
+      </div>
+    </div>
+    
+    <div class="">
+      <label for="prix" class="form-label">prix</label>
+      <input [(ngModel)]="vehicule.prix" #prix="ngModel" type="number" id="prix" class="form-control" name="prix" >
+      <div [hidden]="prix.valid || prix.pristine" id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+        characters, or emoji.
+      </div>
+    </div>
+    
+    <div class="">
+      <label for="imageUrl" class="form-label">imageUrl</label>
+      <input [(ngModel)]="vehicule.imageUrl" #imageUrl="ngModel" type="url" id="imageUrl" class="form-control" name="imageUrl" >
+      <div [hidden]="imageUrl.valid || imageUrl.pristine" id="passwordHelpBlock" class="form-text">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+        characters, or emoji.
+      </div>
+    </div>
+    
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+    <button [disabled]="!vehiculeForm.form.valid" type="submit" class="btn btn-primary">Sauvegarder</button>
+  </div>
+</form>

@@ -1,19 +1,45 @@
 {
-    "posts": [
-      { "id": 1, "title": "json-server", "author": "typicode" }
-    ],
-    "comments": [
-      { "id": 1, "body": "some comment", "postId": 1 }
-    ],
-    "profile": { "name": "typicode" },
-    "vehicule": [
-        {
-            "id":1,
-            "name":"Yarise",
-            "marque":"Toyota",
-            "kilometrage":1000,
-            "prix":1500,
-            "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
-        }
-    ]
-  }
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "vehicule": [
+    {
+      "id": 1,
+      "name": "Yarise",
+      "marque": "Toyota",
+      "kilometrage": 1000,
+      "prix": 1500,
+      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+    },
+    {
+      "name": "Ben",
+      "marque": "Mercedz",
+      "kilometrage": 1500,
+      "prix": 1000000,
+      "imageUrl": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+      "id": 2
+    },
+    {
+      "name": "Sportage",
+      "marque": "KIA",
+      "kilometrage": 10050,
+      "prix": 2500000,
+      "imageUrl": "https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
+      "id": 3
+    }
+  ]
+}
