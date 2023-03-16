@@ -1,14 +1,16 @@
 <h1 class="mb-3">Liste des véhicules disponible</h1>
 <hr>
 <div *ngIf="vehiculeList" class="row">
-    <div *ngFor="let vehicule of vehiculeList" class="card p-0" style="width: 18rem;">
+  <div *ngFor="let vehicule of vehiculeList" style="width: 18rem;">
+    <div [hidden]="!vehicule.marque" class="card p-0">
         <img [src]="vehicule.imageUrl"
-         class="card-img-top" alt="Belle voiture">
+         class="card-img-top" alt="{{vehicule.name}}">
         <div class="card-body">
           <h5 class="card-title">{{vehicule.name}}</h5>
           <p class="card-text">{{vehicule.marque}}</p>
-          <a routerLink="vehicule/{{vehicule.id}}" href="#" class="btn btn-primary">Consulter</a>
+          <a [routerLink]="['/vehicule',vehicule.id]" routerLinkActive="router-link-active" href="#" class="btn btn-primary">Consulter</a>
         </div>
-    </div>
+      </div>
+  </div>
 </div>
 <app-add-vehicule></app-add-vehicule>

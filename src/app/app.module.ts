@@ -7,11 +7,13 @@ import { VehiculeModule } from './vehicule/vehicule.module';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { VehiculeService } from "./../vehicule.service";
 import { Vehicule } from '../vehicule';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-vehicule-list',
@@ -9,7 +10,7 @@ import { Vehicule } from '../vehicule';
 })
 export class VehiculeListComponent implements OnInit {
   vehiculeList!:Vehicule[];
-  constructor(private vehiculeService:VehiculeService){}
+  constructor(private vehiculeService:VehiculeService,private router:Router){}
 
   ngOnInit(): void {
     this.handleVehiculeList()
@@ -21,6 +22,10 @@ export class VehiculeListComponent implements OnInit {
         this.vehiculeList = vehicules;
       }
     )
+  }
+
+  goToDetail(vehicule:Vehicule){
+    this.router.navigate(['/vehicule/',vehicule.id])
   }
 
 }

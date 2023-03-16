@@ -25,8 +25,17 @@ export class VehiculeService {
     )
   }
   
+  getVehiculeById(id:number):Observable<Vehicule>{
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-type':'Application/json'})
+    }
+    return this.http.get<Vehicule>(`http://localhost:3000/vehicule?id=${id}`,httpOptions).pipe(
+      tap(response=>this.log(response)),
+      catchError(error=>this.handleErrorValue(error,[]))
+    )
+  }
+  
   private log(response:any){
-    console.table(response);
     return of(response)
   }
 

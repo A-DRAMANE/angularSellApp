@@ -6,9 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AddVehiculeComponent } from './add-vehicule/add-vehicule.component';
 import { VehiculeFormComponent } from './vehicule-form/vehicule-form.component';
 import { FormsModule } from "@angular/forms";
-import { EditeVehiculeComponent } from './edite-vehicule/edite-vehicule.component'
+import { EditeVehiculeComponent } from './edite-vehicule/edite-vehicule.component';
+import { VehiculeDetailComponent } from './vehicule-detail/vehicule-detail.component'
 
 const VehiculeRoutes: Routes = [
+  {path:"vehicule/:id", component: VehiculeDetailComponent},
   {path:"vehicules", component: VehiculeListComponent},
 ];
 
@@ -17,7 +19,8 @@ const VehiculeRoutes: Routes = [
     VehiculeListComponent,
     AddVehiculeComponent,
     VehiculeFormComponent,
-    EditeVehiculeComponent
+    EditeVehiculeComponent,
+    VehiculeDetailComponent
   ],
   imports: [
   CommonModule,
